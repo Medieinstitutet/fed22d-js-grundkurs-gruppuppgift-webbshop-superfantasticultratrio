@@ -1,7 +1,6 @@
 const products = [
     {
-        "productId": 1,
-        "img": "img/produkt-1-kaffepasar.jpg",
+        "img": ["img/produkt-1-kaffepasar.jpg", ""],
         "imgAlt": "",
         "name":  "Sibaristica",
         "desc": "Bönor från Guatemala och Colombia",
@@ -9,8 +8,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 2,
-        "img": "img/produkt-2-andrakaffapasar.jpg",
+        "img": ["img/produkt-2-andrakaffapasar.jpg", ""],
         "imgAlt": "",
         "name":  "Blue Magic",
         "desc": "Espressobönor",
@@ -18,8 +16,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 3,
-        "img": "img/produkt-3-merkaffe.jpg",
+        "img": ["img/produkt-3-merkaffe.jpg", ""],
         "imgAlt": "",
         "name":  "Specialty Beans",
         "desc": '"Speciella" bönor från Ethiopien',
@@ -27,8 +24,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 4,
-        "img": "img/produkt-4-kopp.jpg",
+        "img": ["img/produkt-4-kopp.jpg", ""],
         "imgAlt": "",
         "name":  "Rustik",
         "desc": "Svart kopp i keramik",
@@ -36,8 +32,7 @@ const products = [
         "amount": 0
     },
     {
-        "product-id": 5,
-        "img": "img/produkt-5-kopp2.jpg",
+        "img": ["img/produkt-5-kopp2.jpg", ""],
         "imgAlt": "",
         "name":  "Grön",
         "desc": "Kopp i poppande grön färg",
@@ -45,8 +40,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 6,
-        "img": "img/produkt-6-v60.jpg",
+        "img": ["img/produkt-6-v60.jpg", ""],
         "imgAlt": "",
         "name":  "V60",
         "desc": "V60 bryggaren som tilltalar din inre hipster",
@@ -54,8 +48,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 7,
-        "img": "img/produkt-7-aeropress.jpg",
+        "img": ["img/produkt-7-aeropress.jpg", ""],
         "imgAlt": "",
         "name":  "Aeropress",
         "desc": "För dig som vill kunna göra kaffe var som helst!",
@@ -63,8 +56,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 8,
-        "img": "img/produkt-8-kopp3.jpg",
+        "img": ["img/produkt-8-kopp3.jpg", ""],
         "imgAlt": "",
         "name":  "Fancy",
         "desc": "För ditt finbesök",
@@ -72,8 +64,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 9,
-        "img": "img/produkt-9-franskpress.jpg",
+        "img": ["img/produkt-9-franskpress.jpg", ""],
         "imgAlt": "",
         "name":  "Franskpress",
         "desc": "Den klassiska Franskpressen går alltid hem",
@@ -81,8 +72,7 @@ const products = [
         "amount": 0
     },
     {
-        "productId": 10,
-        "img": "img/produkt-10-kopp4.jpg",
+        "img": ["img/produkt-10-kopp4.jpg", ""],
         "imgAlt": "",
         "name":  "Orange",
         "desc": "En större kopp för dig med ett större beroende",
@@ -97,13 +87,13 @@ function renderProducts() {
     for (let i = 0; i < products.length; i++) {
         productGrid.innerHTML +=
         `
-        <div class="product-card" id="${products[i].productId}">
+        <div class="product-card" id="${i}">
             <div class="image">
                 <img
-                    src="${products[i].img}"
+                    src="${products[i].img[0]}"
                     height="100"
                     width="100"
-                    alt=""
+                    alt="${products[i].imgAlt}"
                 />
             </div>
             <div class="product-info">
