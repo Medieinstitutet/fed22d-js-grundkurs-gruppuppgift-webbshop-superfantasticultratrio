@@ -103,7 +103,7 @@ function renderBasket() {
             <p>${products[i].amount}</p>
             <button class="button-remove" data-id="${i}">-</button>
           </div>
-        </div>
+        </div>´
       </div>
 	  `;
     }
